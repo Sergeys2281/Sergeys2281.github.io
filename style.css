@@ -20,7 +20,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     min-width: 300px;
-    max-width: 600px; /* Додана максимальна ширина */
+    max-width: 600px;
     width: auto;
 }
 
@@ -32,7 +32,7 @@ body {
 
 .player h2 {
     margin-bottom: 10px;
-    max-width: 150px; /* Максимальна ширина для імені гравця */
+    max-width: 150px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -66,12 +66,10 @@ body {
     background-color: #2ecc71;
 }
 
-/* Специфічний стиль для кнопки "Нова гра", яка на початку прихована */
 #reset-btn {
-    display: none; /* Прихована за замовчуванням */
+    display: none; 
 }
 
-/* Доданий стиль для адаптації контейнера при довгому імені */
 .player {
     flex: 1;
     min-width: 120px;
