@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гра "21"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Гра "21"</h1>
+        <p id="user-name"></p>
+        <div class="score-board">
+            <div class="player">
+                <h2 id="user-name-display">User</h2>
+                <p id="user-score">0</p>
+            </div>
+            <div class="player">
+                <h2>Computer</h2>
+                <p id="computer-score">0</p>
+            </div>
+        </div>
+        <div class="cards">
+            <img id="user-card" src="" alt="User Card">
+            <img id="computer-card" src="" alt="Computer Card">
+        </div>
+        <button id="generate-btn">Generate</button>
+        <button id="reset-btn" style="display: none;">Нова гра</button>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
