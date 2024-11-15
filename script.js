@@ -53,7 +53,13 @@ function generateCards() {
 
         attempts--;
 
-        if (attempts === 0) {
+        if (userTotalScore > 21 || computerTotalScore > 21){
+            generateBtn.disabled = true;
+            showResultOverflow();
+            resetBtn.style.display = "inline-block";
+        }
+
+        if (attempts === 0 && userTotalScore < 22 && computerTotalScore < 22) {
             generateBtn.disabled = true;
             showResult();
             resetBtn.style.display = "inline-block";
@@ -68,6 +74,16 @@ function showResult() {
         resultEl.innerText = "Комп'ютер виграв!";
     } else {
         resultEl.innerText = "Нічия!";
+    }
+}
+
+function showResultOverflow() {
+    if (userTotalScore > 21 && computerTotalScore > 21) {
+        resultEl.innerText = "Нічия! У всіх перебор!";
+    } else if (userTotalScore > 21 && computerTotalScore < 22) {
+        resultEl.innerText = "Комп'ютер виграв! У гравця перебор!";
+    } else if (userTotalScore < 22 && computerTotalScore > 21) {
+        resultEl.innerText = `${userName} виграв! У комп'ютера перебор!`;
     }
 }
 
